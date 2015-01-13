@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7535E75F1A6577AC00A7605C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E75E1A6577AC00A7605C /* main.m */; };
+		7535E7621A6577AC00A7605C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E7611A6577AC00A7605C /* AppDelegate.m */; };
+		7535E7651A6577AC00A7605C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E7641A6577AC00A7605C /* MasterViewController.m */; };
+		7535E7681A6577AC00A7605C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E7671A6577AC00A7605C /* DetailViewController.m */; };
+		7535E76B1A6577AC00A7605C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7535E7691A6577AC00A7605C /* Main.storyboard */; };
+		7535E76D1A6577AC00A7605C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7535E76C1A6577AC00A7605C /* Images.xcassets */; };
+		7535E7701A6577AC00A7605C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7535E76E1A6577AC00A7605C /* LaunchScreen.xib */; };
+		7535E77C1A6577AC00A7605C /* yeetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E77B1A6577AC00A7605C /* yeetTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7535E7761A6577AC00A7605C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7535E7511A6577AC00A7605C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7535E7581A6577AC00A7605C;
+			remoteInfo = yeet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7535E7591A6577AC00A7605C /* yeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7535E75D1A6577AC00A7605C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7535E75E1A6577AC00A7605C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7535E7601A6577AC00A7605C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7535E7611A6577AC00A7605C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7535E7631A6577AC00A7605C /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		7535E7641A6577AC00A7605C /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		7535E7661A6577AC00A7605C /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		7535E7671A6577AC00A7605C /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		7535E76A1A6577AC00A7605C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7535E76C1A6577AC00A7605C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7535E76F1A6577AC00A7605C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7535E7751A6577AC00A7605C /* yeetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yeetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7535E77A1A6577AC00A7605C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7535E77B1A6577AC00A7605C /* yeetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yeetTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7535E7561A6577AC00A7605C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7535E7721A6577AC00A7605C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7535E7501A6577AC00A7605C = {
+			isa = PBXGroup;
+			children = (
+				7535E75B1A6577AC00A7605C /* yeet */,
+				7535E7781A6577AC00A7605C /* yeetTests */,
+				7535E75A1A6577AC00A7605C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7535E75A1A6577AC00A7605C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7535E7591A6577AC00A7605C /* yeet.app */,
+				7535E7751A6577AC00A7605C /* yeetTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7535E75B1A6577AC00A7605C /* yeet */ = {
+			isa = PBXGroup;
+			children = (
+				7535E7601A6577AC00A7605C /* AppDelegate.h */,
+				7535E7611A6577AC00A7605C /* AppDelegate.m */,
+				7535E7631A6577AC00A7605C /* MasterViewController.h */,
+				7535E7641A6577AC00A7605C /* MasterViewController.m */,
+				7535E7661A6577AC00A7605C /* DetailViewController.h */,
+				7535E7671A6577AC00A7605C /* DetailViewController.m */,
+				7535E7691A6577AC00A7605C /* Main.storyboard */,
+				7535E76C1A6577AC00A7605C /* Images.xcassets */,
+				7535E76E1A6577AC00A7605C /* LaunchScreen.xib */,
+				7535E75C1A6577AC00A7605C /* Supporting Files */,
+			);
+			path = yeet;
+			sourceTree = "<group>";
+		};
+		7535E75C1A6577AC00A7605C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7535E75D1A6577AC00A7605C /* Info.plist */,
+				7535E75E1A6577AC00A7605C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7535E7781A6577AC00A7605C /* yeetTests */ = {
+			isa = PBXGroup;
+			children = (
+				7535E77B1A6577AC00A7605C /* yeetTests.m */,
+				7535E7791A6577AC00A7605C /* Supporting Files */,
+			);
+			path = yeetTests;
+			sourceTree = "<group>";
+		};
+		7535E7791A6577AC00A7605C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7535E77A1A6577AC00A7605C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7535E7581A6577AC00A7605C /* yeet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7535E77F1A6577AC00A7605C /* Build configuration list for PBXNativeTarget "yeet" */;
+			buildPhases = (
+				7535E7551A6577AC00A7605C /* Sources */,
+				7535E7561A6577AC00A7605C /* Frameworks */,
+				7535E7571A6577AC00A7605C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = yeet;
+			productName = yeet;
+			productReference = 7535E7591A6577AC00A7605C /* yeet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7535E7741A6577AC00A7605C /* yeetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7535E7821A6577AC00A7605C /* Build configuration list for PBXNativeTarget "yeetTests" */;
+			buildPhases = (
+				7535E7711A6577AC00A7605C /* Sources */,
+				7535E7721A6577AC00A7605C /* Frameworks */,
+				7535E7731A6577AC00A7605C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7535E7771A6577AC00A7605C /* PBXTargetDependency */,
+			);
+			name = yeetTests;
+			productName = yeetTests;
+			productReference = 7535E7751A6577AC00A7605C /* yeetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7535E7511A6577AC00A7605C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Akshay Easwaran";
+				TargetAttributes = {
+					7535E7581A6577AC00A7605C = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					7535E7741A6577AC00A7605C = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 7535E7581A6577AC00A7605C;
+					};
+				};
+			};
+			buildConfigurationList = 7535E7541A6577AC00A7605C /* Build configuration list for PBXProject "yeet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7535E7501A6577AC00A7605C;
+			productRefGroup = 7535E75A1A6577AC00A7605C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7535E7581A6577AC00A7605C /* yeet */,
+				7535E7741A6577AC00A7605C /* yeetTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7535E7571A6577AC00A7605C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7535E76B1A6577AC00A7605C /* Main.storyboard in Resources */,
+				7535E7701A6577AC00A7605C /* LaunchScreen.xib in Resources */,
+				7535E76D1A6577AC00A7605C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7535E7731A6577AC00A7605C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7535E7551A6577AC00A7605C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7535E7621A6577AC00A7605C /* AppDelegate.m in Sources */,
+				7535E7651A6577AC00A7605C /* MasterViewController.m in Sources */,
+				7535E75F1A6577AC00A7605C /* main.m in Sources */,
+				7535E7681A6577AC00A7605C /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7535E7711A6577AC00A7605C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7535E77C1A6577AC00A7605C /* yeetTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7535E7771A6577AC00A7605C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7535E7581A6577AC00A7605C /* yeet */;
+			targetProxy = 7535E7761A6577AC00A7605C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7535E7691A6577AC00A7605C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7535E76A1A6577AC00A7605C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7535E76E1A6577AC00A7605C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7535E76F1A6577AC00A7605C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7535E77D1A6577AC00A7605C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7535E77E1A6577AC00A7605C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7535E7801A6577AC00A7605C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = yeet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7535E7811A6577AC00A7605C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = yeet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7535E7831A6577AC00A7605C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = yeetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yeet.app/yeet";
+			};
+			name = Debug;
+		};
+		7535E7841A6577AC00A7605C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = yeetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yeet.app/yeet";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7535E7541A6577AC00A7605C /* Build configuration list for PBXProject "yeet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7535E77D1A6577AC00A7605C /* Debug */,
+				7535E77E1A6577AC00A7605C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7535E77F1A6577AC00A7605C /* Build configuration list for PBXNativeTarget "yeet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7535E7801A6577AC00A7605C /* Debug */,
+				7535E7811A6577AC00A7605C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7535E7821A6577AC00A7605C /* Build configuration list for PBXNativeTarget "yeetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7535E7831A6577AC00A7605C /* Debug */,
+				7535E7841A6577AC00A7605C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7535E7511A6577AC00A7605C /* Project object */;
+}
