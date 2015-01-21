@@ -46,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		75173FDD1A7072FF00EE756A /* YTConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTConstants.h; sourceTree = "<group>"; };
 		7535E7591A6577AC00A7605C /* yeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7535E75D1A6577AC00A7605C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7535E75E1A6577AC00A7605C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 			children = (
 				7535E7601A6577AC00A7605C /* YTAppDelegate.h */,
 				7535E7611A6577AC00A7605C /* YTAppDelegate.m */,
+				75173FDD1A7072FF00EE756A /* YTConstants.h */,
 				7535E7631A6577AC00A7605C /* YTMainViewController.h */,
 				7535E7641A6577AC00A7605C /* YTMainViewController.m */,
 				7535E7AA1A693EFF00A7605C /* YTAddFriendViewController.h */,
@@ -494,6 +496,7 @@
 				7535E7811A6577AC00A7605C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7535E7821A6577AC00A7605C /* Build configuration list for PBXNativeTarget "yeetTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +505,7 @@
 				7535E7841A6577AC00A7605C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
