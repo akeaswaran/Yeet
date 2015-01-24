@@ -7,32 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75097E781A7404FD004E8EA1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75097E771A7404FD004E8EA1 /* CloudKit.framework */; };
+		75097E7E1A740AC2004E8EA1 /* YTCloudKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 75097E7D1A740AC2004E8EA1 /* YTCloudKitManager.m */; };
+		75097E811A740D20004E8EA1 /* YTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 75097E801A740D20004E8EA1 /* YTUser.m */; };
+		75097E9D1A74337F004E8EA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75097E9C1A74337F004E8EA1 /* UIKit.framework */; };
+		75097E9F1A743385004E8EA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75097E9E1A743385004E8EA1 /* Foundation.framework */; };
+		75097EA11A74338E004E8EA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75097EA01A74338E004E8EA1 /* CoreGraphics.framework */; };
 		7535E75F1A6577AC00A7605C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E75E1A6577AC00A7605C /* main.m */; };
 		7535E7621A6577AC00A7605C /* YTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E7611A6577AC00A7605C /* YTAppDelegate.m */; };
 		7535E7651A6577AC00A7605C /* YTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E7641A6577AC00A7605C /* YTMainViewController.m */; };
 		7535E76D1A6577AC00A7605C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7535E76C1A6577AC00A7605C /* Images.xcassets */; };
 		7535E7701A6577AC00A7605C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7535E76E1A6577AC00A7605C /* LaunchScreen.xib */; };
 		7535E77C1A6577AC00A7605C /* yeetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E77B1A6577AC00A7605C /* yeetTests.m */; };
-		7535E78A1A6579A500A7605C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535E7851A6579A500A7605C /* Bolts.framework */; };
-		7535E78B1A6579A500A7605C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535E7861A6579A500A7605C /* Parse.framework */; };
-		7535E78C1A6579A500A7605C /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535E7871A6579A500A7605C /* ParseCrashReporting.framework */; };
-		7535E78D1A6579A500A7605C /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535E7881A6579A500A7605C /* ParseFacebookUtils.framework */; };
-		7535E78E1A6579A500A7605C /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535E7891A6579A500A7605C /* ParseUI.framework */; };
-		7535E79A1A657A0700A7605C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535E78F1A657A0700A7605C /* AudioToolbox.framework */; };
-		7535E79B1A657A0700A7605C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535E7901A657A0700A7605C /* CFNetwork.framework */; };
-		7535E79C1A657A0700A7605C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535E7911A657A0700A7605C /* CoreGraphics.framework */; };
-		7535E79D1A657A0700A7605C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535E7921A657A0700A7605C /* CoreLocation.framework */; };
-		7535E79E1A657A0700A7605C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535E7931A657A0700A7605C /* libsqlite3.dylib */; };
-		7535E79F1A657A0700A7605C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535E7941A657A0700A7605C /* libz.dylib */; };
-		7535E7A01A657A0700A7605C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535E7951A657A0700A7605C /* MobileCoreServices.framework */; };
-		7535E7A11A657A0700A7605C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535E7961A657A0700A7605C /* QuartzCore.framework */; };
-		7535E7A21A657A0700A7605C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535E7971A657A0700A7605C /* Security.framework */; };
-		7535E7A31A657A0700A7605C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535E7981A657A0700A7605C /* StoreKit.framework */; };
-		7535E7A41A657A0700A7605C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7535E7991A657A0700A7605C /* SystemConfiguration.framework */; };
 		7535E7A81A657B6900A7605C /* YTSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E7A61A657B6900A7605C /* YTSignUpViewController.m */; };
 		7535E7A91A657B6900A7605C /* YTSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7535E7A71A657B6900A7605C /* YTSignUpViewController.xib */; };
-		7535E7AD1A693EFF00A7605C /* YTAddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E7AB1A693EFF00A7605C /* YTAddFriendViewController.m */; };
-		7535E7AE1A693EFF00A7605C /* YTAddFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7535E7AC1A693EFF00A7605C /* YTAddFriendViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +34,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		75173FDD1A7072FF00EE756A /* YTConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTConstants.h; sourceTree = "<group>"; };
+		75097E761A7404F5004E8EA1 /* yeet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = yeet.entitlements; sourceTree = "<group>"; };
+		75097E771A7404FD004E8EA1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		75097E7C1A740AC2004E8EA1 /* YTCloudKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTCloudKitManager.h; sourceTree = "<group>"; };
+		75097E7D1A740AC2004E8EA1 /* YTCloudKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTCloudKitManager.m; sourceTree = "<group>"; };
+		75097E7F1A740D20004E8EA1 /* YTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTUser.h; sourceTree = "<group>"; };
+		75097E801A740D20004E8EA1 /* YTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTUser.m; sourceTree = "<group>"; };
+		75097E9C1A74337F004E8EA1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		75097E9E1A743385004E8EA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		75097EA01A74338E004E8EA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7535E7591A6577AC00A7605C /* yeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7535E75D1A6577AC00A7605C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7535E75E1A6577AC00A7605C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,28 +55,9 @@
 		7535E7751A6577AC00A7605C /* yeetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yeetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7535E77A1A6577AC00A7605C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7535E77B1A6577AC00A7605C /* yeetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yeetTests.m; sourceTree = "<group>"; };
-		7535E7851A6579A500A7605C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		7535E7861A6579A500A7605C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		7535E7871A6579A500A7605C /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
-		7535E7881A6579A500A7605C /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		7535E7891A6579A500A7605C /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
-		7535E78F1A657A0700A7605C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		7535E7901A657A0700A7605C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		7535E7911A657A0700A7605C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		7535E7921A657A0700A7605C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		7535E7931A657A0700A7605C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		7535E7941A657A0700A7605C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		7535E7951A657A0700A7605C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		7535E7961A657A0700A7605C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		7535E7971A657A0700A7605C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		7535E7981A657A0700A7605C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		7535E7991A657A0700A7605C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7535E7A51A657B6900A7605C /* YTSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTSignUpViewController.h; sourceTree = "<group>"; };
 		7535E7A61A657B6900A7605C /* YTSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTSignUpViewController.m; sourceTree = "<group>"; };
 		7535E7A71A657B6900A7605C /* YTSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YTSignUpViewController.xib; sourceTree = "<group>"; };
-		7535E7AA1A693EFF00A7605C /* YTAddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTAddFriendViewController.h; sourceTree = "<group>"; };
-		7535E7AB1A693EFF00A7605C /* YTAddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTAddFriendViewController.m; sourceTree = "<group>"; };
-		7535E7AC1A693EFF00A7605C /* YTAddFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YTAddFriendViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,22 +65,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7535E79A1A657A0700A7605C /* AudioToolbox.framework in Frameworks */,
-				7535E79B1A657A0700A7605C /* CFNetwork.framework in Frameworks */,
-				7535E79C1A657A0700A7605C /* CoreGraphics.framework in Frameworks */,
-				7535E79D1A657A0700A7605C /* CoreLocation.framework in Frameworks */,
-				7535E79E1A657A0700A7605C /* libsqlite3.dylib in Frameworks */,
-				7535E79F1A657A0700A7605C /* libz.dylib in Frameworks */,
-				7535E7A01A657A0700A7605C /* MobileCoreServices.framework in Frameworks */,
-				7535E7A11A657A0700A7605C /* QuartzCore.framework in Frameworks */,
-				7535E7A21A657A0700A7605C /* Security.framework in Frameworks */,
-				7535E7A31A657A0700A7605C /* StoreKit.framework in Frameworks */,
-				7535E7A41A657A0700A7605C /* SystemConfiguration.framework in Frameworks */,
-				7535E78B1A6579A500A7605C /* Parse.framework in Frameworks */,
-				7535E78C1A6579A500A7605C /* ParseCrashReporting.framework in Frameworks */,
-				7535E78E1A6579A500A7605C /* ParseUI.framework in Frameworks */,
-				7535E78D1A6579A500A7605C /* ParseFacebookUtils.framework in Frameworks */,
-				7535E78A1A6579A500A7605C /* Bolts.framework in Frameworks */,
+				75097EA11A74338E004E8EA1 /* CoreGraphics.framework in Frameworks */,
+				75097E9F1A743385004E8EA1 /* Foundation.framework in Frameworks */,
+				75097E9D1A74337F004E8EA1 /* UIKit.framework in Frameworks */,
+				75097E781A7404FD004E8EA1 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,14 +103,15 @@
 		7535E75B1A6577AC00A7605C /* yeet */ = {
 			isa = PBXGroup;
 			children = (
+				75097E761A7404F5004E8EA1 /* yeet.entitlements */,
 				7535E7601A6577AC00A7605C /* YTAppDelegate.h */,
 				7535E7611A6577AC00A7605C /* YTAppDelegate.m */,
-				75173FDD1A7072FF00EE756A /* YTConstants.h */,
 				7535E7631A6577AC00A7605C /* YTMainViewController.h */,
 				7535E7641A6577AC00A7605C /* YTMainViewController.m */,
-				7535E7AA1A693EFF00A7605C /* YTAddFriendViewController.h */,
-				7535E7AB1A693EFF00A7605C /* YTAddFriendViewController.m */,
-				7535E7AC1A693EFF00A7605C /* YTAddFriendViewController.xib */,
+				75097E7C1A740AC2004E8EA1 /* YTCloudKitManager.h */,
+				75097E7D1A740AC2004E8EA1 /* YTCloudKitManager.m */,
+				75097E7F1A740D20004E8EA1 /* YTUser.h */,
+				75097E801A740D20004E8EA1 /* YTUser.m */,
 				7535E7A51A657B6900A7605C /* YTSignUpViewController.h */,
 				7535E7A61A657B6900A7605C /* YTSignUpViewController.m */,
 				7535E7A71A657B6900A7605C /* YTSignUpViewController.xib */,
@@ -159,22 +125,10 @@
 		7535E75C1A6577AC00A7605C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7535E78F1A657A0700A7605C /* AudioToolbox.framework */,
-				7535E7901A657A0700A7605C /* CFNetwork.framework */,
-				7535E7911A657A0700A7605C /* CoreGraphics.framework */,
-				7535E7921A657A0700A7605C /* CoreLocation.framework */,
-				7535E7931A657A0700A7605C /* libsqlite3.dylib */,
-				7535E7941A657A0700A7605C /* libz.dylib */,
-				7535E7951A657A0700A7605C /* MobileCoreServices.framework */,
-				7535E7961A657A0700A7605C /* QuartzCore.framework */,
-				7535E7971A657A0700A7605C /* Security.framework */,
-				7535E7981A657A0700A7605C /* StoreKit.framework */,
-				7535E7991A657A0700A7605C /* SystemConfiguration.framework */,
-				7535E7851A6579A500A7605C /* Bolts.framework */,
-				7535E7861A6579A500A7605C /* Parse.framework */,
-				7535E7871A6579A500A7605C /* ParseCrashReporting.framework */,
-				7535E7881A6579A500A7605C /* ParseFacebookUtils.framework */,
-				7535E7891A6579A500A7605C /* ParseUI.framework */,
+				75097EA01A74338E004E8EA1 /* CoreGraphics.framework */,
+				75097E9E1A743385004E8EA1 /* Foundation.framework */,
+				75097E9C1A74337F004E8EA1 /* UIKit.framework */,
+				75097E771A7404FD004E8EA1 /* CloudKit.framework */,
 				7535E75D1A6577AC00A7605C /* Info.plist */,
 				7535E75E1A6577AC00A7605C /* main.m */,
 			);
@@ -247,6 +201,12 @@
 				TargetAttributes = {
 					7535E7581A6577AC00A7605C = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = XK5N7CWNWH;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					7535E7741A6577AC00A7605C = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -281,7 +241,6 @@
 				7535E7A91A657B6900A7605C /* YTSignUpViewController.xib in Resources */,
 				7535E7701A6577AC00A7605C /* LaunchScreen.xib in Resources */,
 				7535E76D1A6577AC00A7605C /* Images.xcassets in Resources */,
-				7535E7AE1A693EFF00A7605C /* YTAddFriendViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,11 +258,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75097E811A740D20004E8EA1 /* YTUser.m in Sources */,
 				7535E7621A6577AC00A7605C /* YTAppDelegate.m in Sources */,
 				7535E7A81A657B6900A7605C /* YTSignUpViewController.m in Sources */,
-				7535E7AD1A693EFF00A7605C /* YTAddFriendViewController.m in Sources */,
 				7535E7651A6577AC00A7605C /* YTMainViewController.m in Sources */,
 				7535E75F1A6577AC00A7605C /* main.m in Sources */,
+				75097E7E1A740AC2004E8EA1 /* YTCloudKitManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +377,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = yeet/yeet.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/yeet",
@@ -425,6 +388,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -432,6 +396,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = yeet/yeet.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/yeet",
@@ -440,6 +407,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

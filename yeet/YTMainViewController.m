@@ -7,7 +7,9 @@
 //
 
 #import "YTMainViewController.h"
-#import <Parse/Parse.h>
+#import "YTSignUpViewController.h"
+#import <CloudKit/CloudKit.h>
+#import "YTUser.h"
 
 @interface YTMainViewController ()
 @property NSArray *objects;
@@ -17,19 +19,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"Load");
+    if (![[YTUser sharedInstance] currentUserExists]) {
+        NSLog(@"NOT EXISTS");
+        [self showSignUp];
+    } else {
+        NSLog(@"Exists");
+    }
 }
 
--(void)refreshFriends {
-    PFQuery *query = [PFQuery queryWithClassName:@"Friends"];
-    [query whereKey:@"user" equalTo:[PFUser currentUser]];
-    [query includeKey:@"user"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            _objects = objects;
-        } else {
-            _objects = @[];
+-(void)refreshFriendsList {
+    _objects = [NSArray array];
+    [self.tableView reloadData];
+}
+
+-(void)showSignUp {
+    [[YTUser sharedInstance] fetchCurrentUserWithSuccessBlock:^(CKRecord *currentUserRecord) {
+        NSLog(@"SUCCESS");
+        if (currentUserRecord && [[YTUser sharedInstance] currentUserRecord]) {
+            NSLog(@"CURRENT USER FOUND, REFRESHING NOW: %@",currentUserRecord);
+            [self refreshFriendsList];
         }
-        [self.tableView reloadData];
+    } failureBlock:^(NSError *error) {
+        NSLog(@"CURRENT USER ERROR: %@",error.localizedDescription);
+        YTSignUpViewController *signUpViewController = [[YTSignUpViewController alloc] init];
+        [self presentViewController:signUpViewController animated:YES completion:nil];
     }];
 }
 
@@ -45,29 +59,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    PFObject *object = self.objects[indexPath.row];
-    PFUser *user = object[@"user"];
-    cell.textLabel.text = [user username];
     return cell;
 }
 
 -(NSArray*)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewRowAction *unfriendAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Unfriend" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        PFObject *object = _objects[indexPath.row];
-        [object deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (succeeded && !error) {
-                [self refreshFriends];
-            }
-        }];
+        
     }];
     
     
     UITableViewRowAction *blockAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"Block" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        PFObject *blockObject = [PFObject objectWithClassName:@"Block"];
-        PFObject *object = _objects[indexPath.row];
-        [blockObject setObject:object[@"user"] forKey:@"blocked"];
-        [blockObject setObject:[PFUser currentUser] forKey:@"user"];
-        [blockObject saveInBackground];
+       
     }];
     
     return @[unfriendAction,blockAction];

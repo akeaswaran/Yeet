@@ -7,31 +7,52 @@
 //
 
 #import "YTSignUpViewController.h"
+#import "YTCloudKitManager.h"
+#import "YTMainViewController.h"
 
 @interface YTSignUpViewController ()
-
 @end
 
 @implementation YTSignUpViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [_usernameField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(IBAction)signUp:(id)sender {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    [[YTCloudKitManager sharedManager] checkIfUsernameIsRegistered:self.usernameField.text successBlock:^(BOOL usernameExists) {
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        //success
+        if (!usernameExists) {
+            // doesnt exist
+            [[YTCloudKitManager sharedManager] registerUsername:self.usernameField.text successBlock:^{
+                //success
+                [(YTMainViewController*)self.presentingViewController performSelector:@selector(refreshFriendsList) withObject:nil];
+                [self dismissViewControllerAnimated:YES completion:nil];
+            } failureBlock:^(NSError *error) {
+                //failure
+                //self.failureNotification.subTitleLabel.text = error.localizedDescription;
+                //[self.failureNotification show];
+                NSLog(@"SIGNUP ERROR: %@",error.localizedDescription);
+            }];
+        } else {
+            //exists
+            //[self.failureNotification show];
+            NSLog(@"ERROR: USERNAME EXISTS");
+        }
+    } failureBlock:^(NSError *error) {
+        //failure
+        //self.failureNotification.subTitleLabel.text = error.localizedDescription;
+       // [self.failureNotification show];
+        NSLog(@"USERNAME CHECK ERROR: %@",error.localizedDescription);
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    }];
 }
-*/
 
 @end

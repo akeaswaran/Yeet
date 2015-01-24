@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface YTMainViewController : UITableViewController
-
+-(void)refreshFriendsList;
 
 @end
 

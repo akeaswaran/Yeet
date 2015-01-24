@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface YTSignUpViewController : UIViewController
-
+@property (weak) IBOutlet UITextField *usernameField;
 @end
