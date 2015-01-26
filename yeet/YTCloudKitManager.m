@@ -55,6 +55,55 @@
     }];
 }
 
+- (void)blockUserWithUsername:(NSString*)username
+            successBlock:(void(^)())successBlock
+            failureBlock:(void(^)(NSError* error))failureBlock {
+            // Create username
+    [self checkIfUsernameIsRegistered:username successBlock:^(BOOL usernameExists) {
+        if (usernameExists) {
+            CKRecord *record = [[CKRecord alloc] initWithRecordType:@"block"];
+            [record setObject:username forKey:@"blocked"];
+            
+            CKReference *newFriendReference = [[CKReference alloc] initWithRecord:[[YTUser sharedInstance] currentUserRecord] action:CKReferenceActionDeleteSelf];
+            record[@"user"] = newFriendReference;
+            
+            [[self _publicDatabase] saveRecord:record completionHandler:^(CKRecord *record, NSError *error) {
+                if (error) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        failureBlock(error);
+                    });
+                } else {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        successBlock();
+                    });
+                }
+            }];
+        } else {
+            NSError *error = [NSError errorWithDomain:@"me.akeaswaran"
+                                                 code:1
+                                             userInfo:@{NSLocalizedDescriptionKey: @"User doesn't exist"
+                                                        }];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                failureBlock(error);
+            });
+        }
+    } failureBlock:^(NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            failureBlock(error);
+        });
+    }];
+}
+
+-(void)loadFriendsForCurrentUserWithCompletionBlock:(YTFriendsCompletionBlock)completionBlock {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"friend = %@",[[[YTUser sharedInstance] currentUserRecord] recordID]];
+    CKQuery *query = [[CKQuery alloc] initWithRecordType:@"friend" predicate:predicate];
+    [[self _publicDatabase] performQuery:query inZoneWithID:nil completionHandler:^(NSArray *results, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionBlock(results,error);
+        });
+    }];
+}
+
 - (void)checkIfUsernameIsRegisteredWithRecordId:(CKRecordID*)recordId
                                    successBlock:(void(^)())successBlock
                                    failureBlock:(void(^)(NSError* error))failureBlock {

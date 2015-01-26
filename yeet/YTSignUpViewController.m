@@ -37,19 +37,14 @@
                 [self dismissViewControllerAnimated:YES completion:nil];
             } failureBlock:^(NSError *error) {
                 //failure
-                //self.failureNotification.subTitleLabel.text = error.localizedDescription;
-                //[self.failureNotification show];
                 NSLog(@"SIGNUP ERROR: %@",error.localizedDescription);
             }];
         } else {
             //exists
-            //[self.failureNotification show];
             NSLog(@"ERROR: USERNAME EXISTS");
         }
     } failureBlock:^(NSError *error) {
         //failure
-        //self.failureNotification.subTitleLabel.text = error.localizedDescription;
-       // [self.failureNotification show];
         NSLog(@"USERNAME CHECK ERROR: %@",error.localizedDescription);
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     }];

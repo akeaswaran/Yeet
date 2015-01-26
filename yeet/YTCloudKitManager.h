@@ -25,6 +25,12 @@ typedef void (^YTFriendsCompletionBlock)(NSArray *friends, NSError *error);
                        successBlock:(void(^)(BOOL usernameExists))successBlock
                        failureBlock:(void(^)(NSError *error))failureBlock;
 
+//Friends
 
+-(void)loadFriendsForCurrentUserWithCompletionBlock:(YTFriendsCompletionBlock)completionBlock;
+
+- (void)blockUserWithUsername:(NSString*)username
+                 successBlock:(void(^)())successBlock
+                 failureBlock:(void(^)(NSError* error))failureBlock;
 
 @end
