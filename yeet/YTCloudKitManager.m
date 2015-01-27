@@ -94,6 +94,44 @@
     }];
 }
 
+- (void)addFriendWithUsername:(NSString*)username
+                 successBlock:(void(^)(CKRecord *newFriend))successBlock
+                 failureBlock:(void(^)(NSError *error))failureBlock {
+    [self checkIfUsernameIsRegistered:username successBlock:^(BOOL usernameExists) {
+         if (usernameExists) {
+             CKRecord *newFriend = [[CKRecord alloc] initWithRecordType:@"friend"];
+             [newFriend setObject:username
+                           forKey:@"username"];
+             CKRecord *record = [[YTUser sharedInstance] currentUserRecord];
+             CKReference *newFriendReference = [[CKReference alloc] initWithRecord:record
+                                                                            action:CKReferenceActionDeleteSelf];
+             newFriend[@"friend"] = newFriendReference;
+             
+             [[[CKContainer defaultContainer] publicCloudDatabase] saveRecord:newFriend completionHandler:^(CKRecord *record, NSError *error) {
+                if (error) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        failureBlock(error);
+                    });
+                } else {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        successBlock(newFriend);
+                    });
+                }
+            }];
+         } else {
+             NSError *error = [NSError errorWithDomain:@"me.akeaswaran"
+                                                  code:1
+                                              userInfo:@{NSLocalizedDescriptionKey: @"User doesn't exist"
+                                                         }];
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 failureBlock(error);
+             });
+         }
+    } failureBlock:^(NSError *error) {
+         failureBlock(error);
+    }];
+}
+
 -(void)loadFriendsForCurrentUserWithCompletionBlock:(YTFriendsCompletionBlock)completionBlock {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"friend = %@",[[[YTUser sharedInstance] currentUserRecord] recordID]];
     CKQuery *query = [[CKQuery alloc] initWithRecordType:@"friend" predicate:predicate];

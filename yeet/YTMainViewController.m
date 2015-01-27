@@ -47,6 +47,29 @@
 
 -(void)addFriend {
     NSLog(@"Add Friend");
+    UIAlertController *alertController = [UIAlertController
+                                          alertControllerWithTitle:@"Add Friend"
+                                          message:@"Enter the username of the user you would like to ass as a friend."
+                                          preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField)
+    {
+        textField.placeholder = @"username";
+    }];
+
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        UITextField *usernameField = alertController.textFields.firstObject;
+        [[YTCloudKitManager sharedManager] addFriendWithUsername:usernameField.text successBlock:^(CKRecord *newFriend) {
+            NSLog(@"Success");
+            [self refreshFriendsList];
+        } failureBlock:^(NSError *error) {
+            NSLog(@"ERROR: %@",error);
+        }];
+    }];
+    
+    [alertController addAction:okAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+    
 }
 
 -(void)showSignUp {

@@ -33,4 +33,8 @@ typedef void (^YTFriendsCompletionBlock)(NSArray *friends, NSError *error);
                  successBlock:(void(^)())successBlock
                  failureBlock:(void(^)(NSError* error))failureBlock;
 
+- (void)addFriendWithUsername:(NSString*)username
+                 successBlock:(void(^)(CKRecord *newFriend))successBlock
+                 failureBlock:(void(^)(NSError *error))failureBlock;
+
 @end
