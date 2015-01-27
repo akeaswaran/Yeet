@@ -10,4 +10,5 @@
 
 @interface YTSignUpViewController : UIViewController
 @property (weak) IBOutlet UITextField *usernameField;
+@property (weak) IBOutlet UITextField *passwordField;
 @end

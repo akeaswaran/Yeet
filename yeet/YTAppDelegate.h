@@ -11,7 +11,7 @@
 @interface YTAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+-(void)askForNotifications;
 
 @end
 

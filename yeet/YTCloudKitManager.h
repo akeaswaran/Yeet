@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <CloudKit/CloudKit.h>
 
-typedef void (^YTFriendsCompletionBlock)(NSArray *friends, NSError *error);
-
 @interface YTCloudKitManager : NSObject
 +(instancetype)sharedManager;
 
@@ -27,14 +25,19 @@ typedef void (^YTFriendsCompletionBlock)(NSArray *friends, NSError *error);
 
 //Friends
 
--(void)loadFriendsForCurrentUserWithCompletionBlock:(YTFriendsCompletionBlock)completionBlock;
+- (void)loadFriendsToCurrentUserWithSuccessBlock:(void(^)(NSArray *friends))successBlock
+                                    failureBlock:(void(^)(NSError *error))failureBlock;
 
-- (void)blockUserWithUsername:(NSString*)username
-                 successBlock:(void(^)())successBlock
-                 failureBlock:(void(^)(NSError* error))failureBlock;
+- (void)blockUser:(CKRecord*)user
+     successBlock:(void(^)(CKRecord *blockedUser))successBlock
+     failureBlock:(void(^)(NSError *error))failureBlock;
 
 - (void)addFriendWithUsername:(NSString*)username
                  successBlock:(void(^)(CKRecord *newFriend))successBlock
                  failureBlock:(void(^)(NSError *error))failureBlock;
+
+- (void)sendYoToFriend:(CKRecord*)friendRecord
+          successBlock:(void(^)())successBlock
+          failureBlock:(void(^)(NSError *error))failureBlock;
 
 @end

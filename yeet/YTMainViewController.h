@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    YTCloudServiceParse,
+    YTCloudServiceCloudKit
+} YTCloudService;
+
 @interface YTMainViewController : UITableViewController
 -(void)refreshFriendsList;
-
+-(instancetype)initWithCloudService:(YTCloudService)service;
 @end
 
