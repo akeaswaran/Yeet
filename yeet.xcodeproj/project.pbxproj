@@ -38,6 +38,12 @@
 		7535E7A81A657B6900A7605C /* YTSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E7A61A657B6900A7605C /* YTSignUpViewController.m */; };
 		7535E7A91A657B6900A7605C /* YTSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7535E7A71A657B6900A7605C /* YTSignUpViewController.xib */; };
 		756802B81A7917C700DEE4BE /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 756802B71A7917C700DEE4BE /* Colours.m */; };
+		75EED5131A7C3C07001DB302 /* GMDCircleLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EED5121A7C3C07001DB302 /* GMDCircleLoader.m */; };
+		75EED51F1A7C3E13001DB302 /* JFMinimalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EED5161A7C3E13001DB302 /* JFMinimalNotification.m */; };
+		75EED5201A7C3E13001DB302 /* JFMinimalNotificationArt.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EED5181A7C3E13001DB302 /* JFMinimalNotificationArt.m */; };
+		75EED5211A7C3E13001DB302 /* NSInvocation+Constructors.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EED51A1A7C3E13001DB302 /* NSInvocation+Constructors.m */; };
+		75EED5221A7C3E13001DB302 /* UIColor+JFMinimalNotificationColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EED51C1A7C3E13001DB302 /* UIColor+JFMinimalNotificationColors.m */; };
+		75EED5231A7C3E13001DB302 /* UIView+Round.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EED51E1A7C3E13001DB302 /* UIView+Round.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +101,18 @@
 		7535E7A71A657B6900A7605C /* YTSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YTSignUpViewController.xib; sourceTree = "<group>"; };
 		756802B61A7917C700DEE4BE /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
 		756802B71A7917C700DEE4BE /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
+		75EED5111A7C3C07001DB302 /* GMDCircleLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDCircleLoader.h; sourceTree = "<group>"; };
+		75EED5121A7C3C07001DB302 /* GMDCircleLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDCircleLoader.m; sourceTree = "<group>"; };
+		75EED5151A7C3E13001DB302 /* JFMinimalNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFMinimalNotification.h; sourceTree = "<group>"; };
+		75EED5161A7C3E13001DB302 /* JFMinimalNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFMinimalNotification.m; sourceTree = "<group>"; };
+		75EED5171A7C3E13001DB302 /* JFMinimalNotificationArt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFMinimalNotificationArt.h; sourceTree = "<group>"; };
+		75EED5181A7C3E13001DB302 /* JFMinimalNotificationArt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFMinimalNotificationArt.m; sourceTree = "<group>"; };
+		75EED5191A7C3E13001DB302 /* NSInvocation+Constructors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Constructors.h"; sourceTree = "<group>"; };
+		75EED51A1A7C3E13001DB302 /* NSInvocation+Constructors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+Constructors.m"; sourceTree = "<group>"; };
+		75EED51B1A7C3E13001DB302 /* UIColor+JFMinimalNotificationColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JFMinimalNotificationColors.h"; sourceTree = "<group>"; };
+		75EED51C1A7C3E13001DB302 /* UIColor+JFMinimalNotificationColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JFMinimalNotificationColors.m"; sourceTree = "<group>"; };
+		75EED51D1A7C3E13001DB302 /* UIView+Round.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Round.h"; sourceTree = "<group>"; };
+		75EED51E1A7C3E13001DB302 /* UIView+Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Round.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,18 +178,11 @@
 				7535E7611A6577AC00A7605C /* YTAppDelegate.m */,
 				7535E7631A6577AC00A7605C /* YTMainViewController.h */,
 				7535E7641A6577AC00A7605C /* YTMainViewController.m */,
-				75097E7C1A740AC2004E8EA1 /* YTCloudKitManager.h */,
-				75097E7D1A740AC2004E8EA1 /* YTCloudKitManager.m */,
-				750587C21A77F18E005743BB /* YTParseManager.h */,
-				750587C31A77F18E005743BB /* YTParseManager.m */,
-				750587C51A77F29A005743BB /* YTConstants.h */,
-				75097E7F1A740D20004E8EA1 /* YTUser.h */,
-				75097E801A740D20004E8EA1 /* YTUser.m */,
 				7535E7A51A657B6900A7605C /* YTSignUpViewController.h */,
 				7535E7A61A657B6900A7605C /* YTSignUpViewController.m */,
 				7535E7A71A657B6900A7605C /* YTSignUpViewController.xib */,
-				756802B61A7917C700DEE4BE /* Colours.h */,
-				756802B71A7917C700DEE4BE /* Colours.m */,
+				75EED5281A7C427F001DB302 /* Cloud Services */,
+				75EED5251A7C4216001DB302 /* Third-Party Libs */,
 				7535E76C1A6577AC00A7605C /* Images.xcassets */,
 				7535E76E1A6577AC00A7605C /* LaunchScreen.xib */,
 				7535E75C1A6577AC00A7605C /* Supporting Files */,
@@ -222,6 +233,81 @@
 				7535E77A1A6577AC00A7605C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		75EED5101A7C3C07001DB302 /* GMDCircleLoader */ = {
+			isa = PBXGroup;
+			children = (
+				75EED5111A7C3C07001DB302 /* GMDCircleLoader.h */,
+				75EED5121A7C3C07001DB302 /* GMDCircleLoader.m */,
+			);
+			path = GMDCircleLoader;
+			sourceTree = "<group>";
+		};
+		75EED5141A7C3E13001DB302 /* JFMinimalNotification */ = {
+			isa = PBXGroup;
+			children = (
+				75EED5151A7C3E13001DB302 /* JFMinimalNotification.h */,
+				75EED5161A7C3E13001DB302 /* JFMinimalNotification.m */,
+				75EED5171A7C3E13001DB302 /* JFMinimalNotificationArt.h */,
+				75EED5181A7C3E13001DB302 /* JFMinimalNotificationArt.m */,
+				75EED5191A7C3E13001DB302 /* NSInvocation+Constructors.h */,
+				75EED51A1A7C3E13001DB302 /* NSInvocation+Constructors.m */,
+				75EED51B1A7C3E13001DB302 /* UIColor+JFMinimalNotificationColors.h */,
+				75EED51C1A7C3E13001DB302 /* UIColor+JFMinimalNotificationColors.m */,
+				75EED51D1A7C3E13001DB302 /* UIView+Round.h */,
+				75EED51E1A7C3E13001DB302 /* UIView+Round.m */,
+			);
+			path = JFMinimalNotification;
+			sourceTree = "<group>";
+		};
+		75EED5241A7C4207001DB302 /* Colours */ = {
+			isa = PBXGroup;
+			children = (
+				756802B61A7917C700DEE4BE /* Colours.h */,
+				756802B71A7917C700DEE4BE /* Colours.m */,
+			);
+			name = Colours;
+			sourceTree = "<group>";
+		};
+		75EED5251A7C4216001DB302 /* Third-Party Libs */ = {
+			isa = PBXGroup;
+			children = (
+				75EED5241A7C4207001DB302 /* Colours */,
+				75EED5141A7C3E13001DB302 /* JFMinimalNotification */,
+				75EED5101A7C3C07001DB302 /* GMDCircleLoader */,
+			);
+			name = "Third-Party Libs";
+			sourceTree = "<group>";
+		};
+		75EED5261A7C426D001DB302 /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				75097E7C1A740AC2004E8EA1 /* YTCloudKitManager.h */,
+				75097E7D1A740AC2004E8EA1 /* YTCloudKitManager.m */,
+				75097E7F1A740D20004E8EA1 /* YTUser.h */,
+				75097E801A740D20004E8EA1 /* YTUser.m */,
+			);
+			name = CloudKit;
+			sourceTree = "<group>";
+		};
+		75EED5271A7C4276001DB302 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				750587C21A77F18E005743BB /* YTParseManager.h */,
+				750587C31A77F18E005743BB /* YTParseManager.m */,
+				750587C51A77F29A005743BB /* YTConstants.h */,
+			);
+			name = Parse;
+			sourceTree = "<group>";
+		};
+		75EED5281A7C427F001DB302 /* Cloud Services */ = {
+			isa = PBXGroup;
+			children = (
+				75EED5261A7C426D001DB302 /* CloudKit */,
+				75EED5271A7C4276001DB302 /* Parse */,
+			);
+			name = "Cloud Services";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,9 +417,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				75097E811A740D20004E8EA1 /* YTUser.m in Sources */,
+				75EED5211A7C3E13001DB302 /* NSInvocation+Constructors.m in Sources */,
 				7535E7621A6577AC00A7605C /* YTAppDelegate.m in Sources */,
+				75EED5231A7C3E13001DB302 /* UIView+Round.m in Sources */,
+				75EED5131A7C3C07001DB302 /* GMDCircleLoader.m in Sources */,
 				7535E7A81A657B6900A7605C /* YTSignUpViewController.m in Sources */,
+				75EED5221A7C3E13001DB302 /* UIColor+JFMinimalNotificationColors.m in Sources */,
+				75EED51F1A7C3E13001DB302 /* JFMinimalNotification.m in Sources */,
 				756802B81A7917C700DEE4BE /* Colours.m in Sources */,
+				75EED5201A7C3E13001DB302 /* JFMinimalNotificationArt.m in Sources */,
 				750587C41A77F18E005743BB /* YTParseManager.m in Sources */,
 				7535E7651A6577AC00A7605C /* YTMainViewController.m in Sources */,
 				7535E75F1A6577AC00A7605C /* main.m in Sources */,

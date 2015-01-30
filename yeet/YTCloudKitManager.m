@@ -125,7 +125,7 @@
                                                                                     }
                                                                                 }];
                              } else {
-                                 NSError *error = [NSError errorWithDomain:@"se.jagcesar"
+                                 NSError *error = [NSError errorWithDomain:@"me.akeaswaran"
                                                                       code:1
                                                                   userInfo:@{NSLocalizedDescriptionKey: @"User doesn't exist"
                                                                              }];

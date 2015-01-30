@@ -51,8 +51,6 @@
         [[PFInstallation currentInstallation] setObject:[PFUser currentUser] forKey:@"user"];
         [[PFInstallation currentInstallation] setChannels:@[[PFUser currentUser].username]];
         [[PFInstallation currentInstallation] saveInBackground];
-    } else {
-        
     }
 }
 

@@ -15,6 +15,8 @@
 #import "YTParseManager.h"
 #import "YTCloudKitManager.h"
 #import "Colours.h"
+#import "GMDCircleLoader.h"
+#import "JFMinimalNotification.h"
 
 @interface YTMainViewController ()
 @property NSArray *objects;
@@ -32,6 +34,24 @@
     return self;
 }
 
+-(void)displaySuccessNotificationWithTitle:(NSString*)title subtitle:(NSString*)subtitle {
+    JFMinimalNotification *successNote = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleSuccess title:title subTitle:subtitle dismissalDelay:1.5 touchHandler:^{
+        [successNote dismiss];
+    }];
+    
+    [self.view addSubview:successNote];
+    [successNote show];
+}
+
+-(void)displayFailureNotificationWithError:(NSError*)error {
+    JFMinimalNotification *errorNote = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleSuccess title:@"Error" subTitle:error.localizedDescription dismissalDelay:1.5 touchHandler:^{
+        [errorNote dismiss];
+    }];
+    
+    [self.view addSubview:errorNote];
+    [errorNote show];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"Load");
@@ -42,9 +62,7 @@
         NSLog(@"Exists");
     }
     
-   // self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addFriend)];
     [self.tableView setSeparatorColor:[UIColor clearColor]];
-    //[self.tableView setBackgroundColor:[UIColor darkTextColor]];
     
     _colors = [[UIColor dangerColor] colorSchemeOfType:ColorSchemeAnalagous];
     
@@ -56,19 +74,26 @@
     [addButton.layer setBorderWidth:3.0];
     
     [self.view addSubview:addButton];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl setTintColor:[UIColor darkGrayColor]];
+    [self.refreshControl addTarget:self action:@selector(refreshFriendsList) forControlEvents:UIControlEventValueChanged];
 }
 
 -(void)refreshFriendsList {
     _objects = [NSArray array];
+
     if (_cloudService == YTCloudServiceCloudKit) {
         [[YTCloudKitManager sharedManager] loadFriendsToCurrentUserWithSuccessBlock:^(NSArray *friends) {
             //success
             _objects = friends;
             [self.tableView reloadData];
+            [self.refreshControl endRefreshing];
         } failureBlock:^(NSError *error) {
             //failure
             _objects = [NSArray array];
             [self.tableView reloadData];
+            [self.refreshControl endRefreshing];
         }];
     } else {
         [[YTParseManager sharedManager] loadFriendsForCurrentUserWithCompletionBlock:^(NSArray *friends, NSError *error) {
@@ -78,6 +103,7 @@
                 _objects = [NSArray array];
             }
             [self.tableView reloadData];
+            [self.refreshControl endRefreshing];
         }];
     }
 }
@@ -96,19 +122,26 @@
 
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         UITextField *usernameField = alertController.textFields.firstObject;
+        [GMDCircleLoader setOnView:self.view withTitle:@"Adding Friend..." animated:YES];
         if (_cloudService == YTCloudServiceCloudKit) {
             [[YTCloudKitManager sharedManager] addFriendWithUsername:usernameField.text successBlock:^(CKRecord *newFriend) {
+                [GMDCircleLoader hideFromView:self.view animated:YES];
                 NSLog(@"Success");
                 [self refreshFriendsList];
             } failureBlock:^(NSError *error) {
                 NSLog(@"ERROR: %@",error);
+                [GMDCircleLoader hideFromView:self.view animated:YES];
+                [self displayFailureNotificationWithError:error];
             }];
         } else {
             [[YTParseManager sharedManager] addFriendWithUsername:usernameField.text successBlock:^(CKRecord *newFriend) {
                 NSLog(@"Success");
+                [GMDCircleLoader hideFromView:self.view animated:YES];
                 [self refreshFriendsList];
             } failureBlock:^(NSError *error) {
                 NSLog(@"ERROR: %@",error);
+                [GMDCircleLoader hideFromView:self.view animated:YES];
+                [self displayFailureNotificationWithError:error];
             }];
         }
     }];
@@ -186,18 +219,24 @@
         if (_cloudService == YTCloudServiceCloudKit) {
             CKRecord *friend = [self.objects objectAtIndex:[indexPath row]];
             [[[CKContainer defaultContainer] publicCloudDatabase] deleteRecordWithID:friend.recordID completionHandler:^(CKRecordID *recordID, NSError *error) {
+                [GMDCircleLoader hideFromView:self.view animated:YES];
                 if (error) {
                     //display error
+                    [self displayFailureNotificationWithError:error];
                 }
-                [self.tableView reloadData];
+                [self refreshFriendsList];
             }];
         } else {
             PFObject *friend = _objects[indexPath.row];
+            NSString *friendName = friend[@"friend"][@"username"];
             [friend deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                [GMDCircleLoader hideFromView:self.view animated:YES];
                 if (succeeded && !error) {
                     //success
+                    [self displaySuccessNotificationWithTitle:@"Sucessfully removed friend" subtitle:[NSString stringWithFormat:@"%@ was removed from your friends list.",friendName]];
                 } else {
                     //failure
+                    [self displayFailureNotificationWithError:error];
                 }
             }];
         }
@@ -208,15 +247,23 @@
             CKRecord *friend = [self.objects objectAtIndex:[indexPath row]];
             [[YTCloudKitManager sharedManager] blockUser:friend successBlock:^(CKRecord *blockedUser){
                 //success
+                [GMDCircleLoader hideFromView:self.view animated:YES];
             } failureBlock:^(NSError *error) {
                 //failure
+                [GMDCircleLoader hideFromView:self.view animated:YES];
+                [self displayFailureNotificationWithError:error];
             }];
         } else {
             PFObject *friend = _objects[indexPath.row];
+            NSString *friendName = friend[@"friend"][@"username"];
             [[YTParseManager sharedManager] blockUser:friend[@"friend"] successBlock:^{
                 //success
+                [GMDCircleLoader hideFromView:self.view animated:YES];
+                [self displaySuccessNotificationWithTitle:@"Sucessfully blocked user" subtitle:[NSString stringWithFormat:@"%@ was blocked from sending you messages.",friendName]];
             } failureBlock:^(NSError *error) {
                 //failure
+                [GMDCircleLoader hideFromView:self.view animated:YES];
+                [self displayFailureNotificationWithError:error];
             }];
         }
     }];
@@ -226,23 +273,32 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    [GMDCircleLoader setOnView:self.view withTitle:@"Sending YEET..." animated:YES];
+    
     if (_cloudService == YTCloudServiceParse) {
         //send YEET w Parse
         PFObject *friend = _objects[indexPath.row];
         PFUser *friendUser = friend[@"friend"];
         [[YTParseManager sharedManager] sendMessageToUser:friendUser successBlock:^{
             //success
+            [GMDCircleLoader hideFromView:self.view animated:YES];
+            [self displaySuccessNotificationWithTitle:[NSString stringWithFormat:@"YEET sent to %@",friendUser.username] subtitle:nil];
         } failureBlock:^(NSError *error) {
             //failure
+            [GMDCircleLoader hideFromView:self.view animated:YES];
+            [self displayFailureNotificationWithError:error];
         }];
     } else {
         //send YEET w CloudKit
         CKRecord *friend = _objects[indexPath.row];
         [[YTCloudKitManager sharedManager] sendYoToFriend:friend successBlock:^{
             //success
+            [GMDCircleLoader hideFromView:self.view animated:YES];
+            [self displaySuccessNotificationWithTitle:@"YEET sent!" subtitle:nil];
         } failureBlock:^(NSError *error) {
             //failure
+            [GMDCircleLoader hideFromView:self.view animated:YES];
+            [self displayFailureNotificationWithError:error];
         }];
     }
 }
