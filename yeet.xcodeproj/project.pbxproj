@@ -37,6 +37,7 @@
 		7535E77C1A6577AC00A7605C /* yeetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E77B1A6577AC00A7605C /* yeetTests.m */; };
 		7535E7A81A657B6900A7605C /* YTSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E7A61A657B6900A7605C /* YTSignUpViewController.m */; };
 		7535E7A91A657B6900A7605C /* YTSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7535E7A71A657B6900A7605C /* YTSignUpViewController.xib */; };
+		756802B81A7917C700DEE4BE /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 756802B71A7917C700DEE4BE /* Colours.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		7535E7A51A657B6900A7605C /* YTSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTSignUpViewController.h; sourceTree = "<group>"; };
 		7535E7A61A657B6900A7605C /* YTSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTSignUpViewController.m; sourceTree = "<group>"; };
 		7535E7A71A657B6900A7605C /* YTSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YTSignUpViewController.xib; sourceTree = "<group>"; };
+		756802B61A7917C700DEE4BE /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
+		756802B71A7917C700DEE4BE /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 				7535E7A51A657B6900A7605C /* YTSignUpViewController.h */,
 				7535E7A61A657B6900A7605C /* YTSignUpViewController.m */,
 				7535E7A71A657B6900A7605C /* YTSignUpViewController.xib */,
+				756802B61A7917C700DEE4BE /* Colours.h */,
+				756802B71A7917C700DEE4BE /* Colours.m */,
 				7535E76C1A6577AC00A7605C /* Images.xcassets */,
 				7535E76E1A6577AC00A7605C /* LaunchScreen.xib */,
 				7535E75C1A6577AC00A7605C /* Supporting Files */,
@@ -328,6 +333,7 @@
 				75097E811A740D20004E8EA1 /* YTUser.m in Sources */,
 				7535E7621A6577AC00A7605C /* YTAppDelegate.m in Sources */,
 				7535E7A81A657B6900A7605C /* YTSignUpViewController.m in Sources */,
+				756802B81A7917C700DEE4BE /* Colours.m in Sources */,
 				750587C41A77F18E005743BB /* YTParseManager.m in Sources */,
 				7535E7651A6577AC00A7605C /* YTMainViewController.m in Sources */,
 				7535E75F1A6577AC00A7605C /* main.m in Sources */,

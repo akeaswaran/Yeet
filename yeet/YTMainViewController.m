@@ -10,12 +10,15 @@
 #import "YTSignUpViewController.h"
 #import <CloudKit/CloudKit.h>
 #import <Parse/Parse.h>
+#import <QuartzCore/QuartzCore.h>
 #import "YTUser.h"
 #import "YTParseManager.h"
 #import "YTCloudKitManager.h"
+#import "Colours.h"
 
 @interface YTMainViewController ()
 @property NSArray *objects;
+@property NSArray *colors;
 @property YTCloudService cloudService;
 @end
 
@@ -39,9 +42,20 @@
         NSLog(@"Exists");
     }
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addFriend)];
-    [self.tableView setSeparatorColor:[UIColor darkGrayColor]];
-    [self.tableView setBackgroundColor:[UIColor darkTextColor]];
+   // self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addFriend)];
+    [self.tableView setSeparatorColor:[UIColor clearColor]];
+    //[self.tableView setBackgroundColor:[UIColor darkTextColor]];
+    
+    _colors = [[UIColor dangerColor] colorSchemeOfType:ColorSchemeAnalagous];
+    
+    UIButton *addButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 5.0 - 40.0, self.view.frame.size.height - 5.0 - 40.0, 40.0, 40.0)];
+    [addButton setBackgroundColor:[UIColor blueColor]];
+    [addButton addTarget:self action:@selector(addFriend) forControlEvents:UIControlEventTouchUpInside];
+    [addButton.layer setCornerRadius:20];
+    [addButton.layer setBorderColor:[UIColor whiteColor].CGColor];
+    [addButton.layer setBorderWidth:3.0];
+    
+    [self.view addSubview:addButton];
 }
 
 -(void)refreshFriendsList {
@@ -147,18 +161,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    [cell setBackgroundColor:[UIColor darkTextColor]];
+    NSInteger colorIndex = indexPath.row % _colors.count;
+    [cell setBackgroundColor:_colors[colorIndex]];
     [cell.textLabel setTextColor:[UIColor whiteColor]];
     [cell.textLabel setTextAlignment:NSTextAlignmentCenter];
     [cell.textLabel setFont:[UIFont boldSystemFontOfSize:50]];
     
     if (_cloudService == YTCloudServiceCloudKit) {
         CKRecord *friend = [self.objects objectAtIndex:[indexPath row]];
-        [cell.textLabel setText:[friend objectForKey:@"username"]];
+        [cell.textLabel setText:[[friend objectForKey:@"username"] uppercaseString]];
     } else {
         PFObject *friend = _objects[indexPath.row];
         PFUser *friendUser = friend[@"friend"];
-        [cell.textLabel setText:friendUser.username];
+        [cell.textLabel setText:[friendUser.username uppercaseString]];
     }
     [cell.textLabel sizeToFit];
     
