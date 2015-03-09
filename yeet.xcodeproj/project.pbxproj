@@ -29,6 +29,11 @@
 		75097E9D1A74337F004E8EA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75097E9C1A74337F004E8EA1 /* UIKit.framework */; };
 		75097E9F1A743385004E8EA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75097E9E1A743385004E8EA1 /* Foundation.framework */; };
 		75097EA11A74338E004E8EA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75097EA01A74338E004E8EA1 /* CoreGraphics.framework */; };
+		752D103C1A7FB964007DC6D4 /* YTIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 752D103A1A7FB964007DC6D4 /* YTIcon@2x.png */; };
+		752D103D1A7FB964007DC6D4 /* YTIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 752D103B1A7FB964007DC6D4 /* YTIcon@3x.png */; };
+		752D103F1A7FB9B5007DC6D4 /* YTIcon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = 752D103E1A7FB9B5007DC6D4 /* YTIcon-80.png */; };
+		752D10421A7FBA2A007DC6D4 /* YTIcon-58.png in Resources */ = {isa = PBXBuildFile; fileRef = 752D10401A7FBA2A007DC6D4 /* YTIcon-58.png */; };
+		752D10431A7FBA2A007DC6D4 /* YTIcon-87.png in Resources */ = {isa = PBXBuildFile; fileRef = 752D10411A7FBA2A007DC6D4 /* YTIcon-87.png */; };
 		7535E75F1A6577AC00A7605C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E75E1A6577AC00A7605C /* main.m */; };
 		7535E7621A6577AC00A7605C /* YTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E7611A6577AC00A7605C /* YTAppDelegate.m */; };
 		7535E7651A6577AC00A7605C /* YTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7535E7641A6577AC00A7605C /* YTMainViewController.m */; };
@@ -84,6 +89,11 @@
 		75097E9C1A74337F004E8EA1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		75097E9E1A743385004E8EA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		75097EA01A74338E004E8EA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		752D103A1A7FB964007DC6D4 /* YTIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YTIcon@2x.png"; sourceTree = "<group>"; };
+		752D103B1A7FB964007DC6D4 /* YTIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YTIcon@3x.png"; sourceTree = "<group>"; };
+		752D103E1A7FB9B5007DC6D4 /* YTIcon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YTIcon-80.png"; sourceTree = "<group>"; };
+		752D10401A7FBA2A007DC6D4 /* YTIcon-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YTIcon-58.png"; sourceTree = "<group>"; };
+		752D10411A7FBA2A007DC6D4 /* YTIcon-87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YTIcon-87.png"; sourceTree = "<group>"; };
 		7535E7591A6577AC00A7605C /* yeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7535E75D1A6577AC00A7605C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7535E75E1A6577AC00A7605C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -152,6 +162,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		752D10441A7FBA4E007DC6D4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				752D103A1A7FB964007DC6D4 /* YTIcon@2x.png */,
+				752D103B1A7FB964007DC6D4 /* YTIcon@3x.png */,
+				752D103E1A7FB9B5007DC6D4 /* YTIcon-80.png */,
+				752D10401A7FBA2A007DC6D4 /* YTIcon-58.png */,
+				752D10411A7FBA2A007DC6D4 /* YTIcon-87.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		7535E7501A6577AC00A7605C = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +206,7 @@
 				75EED5281A7C427F001DB302 /* Cloud Services */,
 				75EED5251A7C4216001DB302 /* Third-Party Libs */,
 				7535E76C1A6577AC00A7605C /* Images.xcassets */,
+				752D10441A7FBA4E007DC6D4 /* Images */,
 				7535E76E1A6577AC00A7605C /* LaunchScreen.xib */,
 				7535E75C1A6577AC00A7605C /* Supporting Files */,
 			);
@@ -396,9 +419,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				752D10421A7FBA2A007DC6D4 /* YTIcon-58.png in Resources */,
+				752D103C1A7FB964007DC6D4 /* YTIcon@2x.png in Resources */,
+				752D10431A7FBA2A007DC6D4 /* YTIcon-87.png in Resources */,
 				7535E7A91A657B6900A7605C /* YTSignUpViewController.xib in Resources */,
 				7535E7701A6577AC00A7605C /* LaunchScreen.xib in Resources */,
+				752D103D1A7FB964007DC6D4 /* YTIcon@3x.png in Resources */,
 				7535E76D1A6577AC00A7605C /* Images.xcassets in Resources */,
+				752D103F1A7FB9B5007DC6D4 /* YTIcon-80.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
